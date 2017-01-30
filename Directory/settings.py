@@ -25,7 +25,7 @@ SECRET_KEY = '_wpr8#(_046!9vih+r1vlq6vsvz14h-y6=u^2i9@l5xe*0e$cc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-teamdirectory.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
