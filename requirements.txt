@@ -1,3 +1,16 @@
+appdirs==1.4.0
 Django==1.10.5
 gunicorn==19.6.0
+heroku==0.1.4
+oauthlib==2.0.1
+packaging==16.8
+PyJWT==1.4.2
+pyparsing==2.1.10
+python-dateutil==1.5
+python-openid==2.2.5
+python-social-auth==0.3.6
+requests==2.13.0
+requests-oauthlib==0.7.0
+six==1.10.0
+social-auth-core==1.1.0
 whitenoise==3.3.0
