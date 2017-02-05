@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +66,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -114,6 +119,23 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# social authentication
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
+SOCIAL_AUTH_LOGIN_LOGIN_URL = '/login/'
+SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/logout/'
+
+#SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '976055881617-d4ckbl8be31arrjloj0fgj3g307lav5q.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '976055881617-d4ckbl8be31arrjloj0fgj3g307lav5q.apps.googleusercontent.com'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '00aJZCNMpcuod1Eb6E_-TJgg'
 
 
 # Static files (CSS, JavaScript, Images)
